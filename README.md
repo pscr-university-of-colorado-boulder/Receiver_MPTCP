@@ -35,4 +35,4 @@ iperf3 -c <server_ip> -p 8080 -R -t <duration>
 1. Now use the scripts in journal/static/DASH/dash_stats.py in client that opens browser window in Private mode to play DASH video.
 2. Use journal/static/DASH/dash_plot.py to plot the bitrate,buffer length etc DASH parameters.
 
-Compile the linux and load it to the receiver.
+
