@@ -16,20 +16,22 @@ Once Linux kernel is download use the mptcp_private/.. directory files to includ
 
 Once machine boots up.
 
-#Server:
-#iperf3:
-  Run iperf3 server as "iperf3 -s -p 8080" 
+# Server:
+
+# iperf3:
+Run iperf3 server as "iperf3 -s -p 8080" 
  
-#DASH:
+# DASH:
   1. Set up DASH server using:
    https://github.com/Dash-Industry-Forum/dash.js
   2. In the server "/var/www/html/DASH/<dash.js> 
 
-#Client:
-#iperf3:
-  iperf3 -c <server_ip> -p 8080 -R -t <duration>
+# Client:
 
-#DASH client.
+# iperf3: 
+iperf3 -c <server_ip> -p 8080 -R -t <duration>
+
+# DASH client.
 1. Now use the scripts in journal/static/DASH/dash_stats.py in client that opens browser window in Private mode to play DASH video.
 2. Use journal/static/DASH/dash_plot.py to plot the bitrate,buffer length etc DASH parameters.
 
