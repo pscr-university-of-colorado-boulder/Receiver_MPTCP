@@ -29,7 +29,7 @@ Run iperf3 server as "iperf3 -s -p 8080"
 # Client:
 
 # iperf3: 
-iperf3 -c <server_ip> -p 8080 -R -t <duration>
+iperf3 -c <server_ip> -p 8080 -R -t \<duration\>
 
 # DASH client.
 1. Now use the scripts in journal/static/DASH/dash_stats.py in client that opens browser window in Private mode to play DASH video.
