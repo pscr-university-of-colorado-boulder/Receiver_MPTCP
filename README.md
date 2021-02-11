@@ -1,7 +1,7 @@
 # Receiver_MPTCP
 This repository has the receiver controlled MPTCP scheduler that reduces the Out Of Order length and improves the overall MPTCP throughput by
  (i)   client-initiated   path   selection  
- (ii)  RTT-based  rate  throttling  mechanisms. 
+ (ii)  RTT-based  rate  throttling  mechanisms using eBPF
 
 # Steps:
 
@@ -35,4 +35,7 @@ iperf3 -c <server_ip> -p 8080 -R -t \<duration\>
 1. Now use the scripts in journal/static/DASH/dash_stats.py in client that opens browser window in Private mode to play DASH video.
 2. Use journal/static/DASH/dash_plot.py to plot the bitrate,buffer length etc DASH parameters.
 
-
+How to run with eBPF:
+We have used appraoch from (https://github.com/hoang-tranviet/mptcp_private ) to have user level eBPF program to run the cMPTCP. The related code is in mptcp_privaate/mptcp-bpf-client/
+Steps:
+make && sudo ./test_mptcp_user bpf_mptcp_cap_bw_kern.o ./my_net_cap_bw.sh -q
